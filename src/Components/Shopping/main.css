@@ -50,12 +50,13 @@
     font-weight: bolder;
     font-family: cursive;
 }
-.dropdown{
+
+.dropdown {
     list-style-type: none;
 
 }
 
-.li{
+.li {
     display: none;
 }
 
@@ -63,45 +64,84 @@
     display: block;
 }
 
-.pre-pro{
+.pre-pro {
     background-color: antiquewhite;
     margin: 0%;
     overflow: hidden;
 }
 
-.pro-info{
+.pro-info {
     font-family: "Hind", sans-serif;
-  font-weight: 300;
-  font-size: 30px;
-  font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    font-style: normal;
 }
 
-.crsl{
+.crsl {
     width: 100%;
     display: flex;
 }
 
-.dot{
+.dot {
     background-color: orangered !important;
     width: 14px !important;
     height: 14px !important;
     clip-path: circle(90px);
 }
-.control-arrow{
+
+.control-arrow {
     top: 40% !important;
     height: 20% !important;
     color: red !important;
 }
 
-.products{
+.home-products {
     display: flex;
-    /* align-content: center; */
+    justify-content: center;
+    gap: 90px;
+}
+
+.home-products p {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-shadow:13px 10px 11px orangered;
+    font-family: "Kanit", sans-serif;  
+    font-weight: bolder;
+}
+
+.link {
+    border: 2px solid orange;
+    padding: 20px;
+    border-radius: 90%;
+}
+
+.link:hover {
+    border: 2px dashed orange;
+    /* transition: 2s; */
+    cursor: pointer;
+    clip-path: none;
+    animation: rotate 1s forwards linear;
+    box-shadow: 10px 10px 20px;
+}
+
+.Home-link-img {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.products {
+    display: flex;
     align-items: center;
     justify-content: center;
     transition: 2s linear;
     transform: rotate3d(80deg);
 }
-.home-img{
+
+.home-img {
     width: 40vh !important;
     height: 50vh !important;
     display: flex;
@@ -109,16 +149,32 @@
     align-items: center;
     transition: 4s;
     position: relative;
-    animation: home-anim 1s ease-out ;   
+    animation: home-anim 1s ease-out;
 }
 
-@keyframes home-anim{
-    from{
+@keyframes home-anim {
+    from {
         top: 40vh;
         rotate: 60deg;
     }
-    to{
+
+    to {
         top: 0vh;
         rotate: 0deg;
     }
+}
+
+@keyframes rotate {
+    from{
+        opacity: 0.6;
+        position: relative;
+        top: -10px;
+        left: -10px;
+    }
+    to{
+        opacity: 1;
+        top: 20px;
+        left: 10px;
+    }
+
 }
