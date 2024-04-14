@@ -1,3 +1,8 @@
+body{
+    width: auto;
+    /* position: fixed; */
+}
+
 .header {
     /* display: flex; */
     padding: 20px;
@@ -53,15 +58,61 @@
 
 .dropdown {
     list-style-type: none;
-
 }
 
-.li {
+.discount{
     display: none;
+    position: absolute;
+    padding: 10px;
+    color: white;
+    background-color: red;
+
+    transition: 2s ease;
+}
+
+.new-arrivals:hover .discount{
+    display: block;
+}
+
+
+.li{
+    position: absolute;
+    padding: 20px;
+    width: 200px;
+    top: 50px;
+    opacity: 0;
+    transform: translateY(-80px);
+    box-shadow: 10px 10px 20px ;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+    z-index: 99;
+    /* backdrop-filter: blur(100px); */
+    background-color: white;
+}
+
+.li li{
+    border-bottom: 2px solid black;
+    border-radius: 6px;
+    line-height: 60px;
+    transition: 0.4s;
+    
+}
+
+.li li:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px;
+}
+
+.mini-img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
 }
 
 .dropdown:hover .li {
-    display: block;
+    /* display: block; */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .pre-pro {
@@ -150,6 +201,78 @@
     transition: 4s;
     position: relative;
     animation: home-anim 1s ease-out;
+}
+
+.new-arrivals{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 1px 9px 2px gray;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.new-arrive-tab{
+    display: flex !important;
+    justify-content: center !important;
+    column-count: 4 !important;
+    flex-wrap: wrap;
+    gap: 90px;
+    
+}
+
+.new-img{
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.new-arrivals:hover{
+    transform: scale(1.05);
+    /* transform:  ; */
+}
+
+.offers {
+    gap: 20px;
+}
+
+.offers label{
+    /* display: contents; */
+    position: relative;
+    top: -50%;
+    font-size: 40px;
+    color: azure;
+    /* height: 40px; */
+    margin-bottom: -20%;
+    /* margin: 5px; */
+}
+.hg{
+    margin-top: 15%;
+}
+
+.str img{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.str p{
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.info label{
+    /* color: rgb(248, 185, 12); */
+
+    font-family: monospace;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.info span{
+    margin-left: 20px;
+    padding: 20px;
+    font-size: large;
 }
 
 @keyframes home-anim {

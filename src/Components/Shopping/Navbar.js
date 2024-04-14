@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import './main.css';
 import Home from './Home.js'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import About from "./About/About.js";
+import Contact from "./Contact/Contact.js";
+import HomeFurnitures from "./HomeFurns/HomeFurnitures.js";
 const Navbar = () => {
+
     return (
         <div className="container-fluid">
-            <div className="header ">
+            <div className="header">
                 <div className="row">
                     <div className="col-md-4">
                         <img src="https://cdn-icons-png.flaticon.com/128/14030/14030577.png" className="nav-img" />
@@ -24,33 +28,36 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                </div>
-                <div className="row">
-                    <ul className="navbar-link">
-                        <li><a href="Home">Home</a></li>
-                        <li><a href="About">About</a></li>
-                        <ul className="dropdown">
-                            <a href="furnitures" className="fre">Furnitures</a>
-                            <li className="li"><a href="Home funrnitures">Home furnitures</a></li>
-                            <li className="li"><a href="office funrnitures">Office furnitures</a></li>
-                            <li className="li"><a href="Home funrnitures">Hospital furnitures</a></li>
-                        </ul>
-                        <li><a href="Contact">Contact</a></li>
-
-                    </ul>                
             </div>
-            <BrowserRouter>
+            <div className="row">
+                <ul className="navbar-link">
+                    <li><Link to="Home">Home</Link></li>
+                    <li><Link to="About">About</Link></li>
+                    <ul className="dropdown">
+                        <Link to="furnitures" className="fre" >
+                            Furnitures
+                        </Link>
+                        <div className="li">
+                            <li><Link to="Home funrnitures">Home furnitures</Link></li>
+                            <li><Link to="office funrnitures">Office furnitures</Link></li>
+                            <li><Link to="Home funrnitures">Hospital furnitures</Link></li>
+                        </div>
+                    </ul>
+                    <li><Link to="Contact">Contact</Link></li>
+                </ul>
+            </div>
+            {/* <BrowserRouter> */}
                 <Routes>
                     <Route>
                         <Route index element={<Home />} />
-                        <Route path="/home" element={<Home />} />
-                        {/* <Route path="/about me" element={<About />} /> */}
-                        {/* <Route path="contact" element={<Contact />} /> */}
-                        {/* <Route path='resume' element={<Resume />} /> */}
+                        <Route path="/Home" element={<Home />} />
+                        <Route path="/About" element={<About />} />
+                        <Route path="/Contact" element={<Contact />} />
+                        <Route path='Home funrnitures' element={<HomeFurnitures />} />
                         {/* <Route path="*" element={<NoPage />} /> */}
                     </Route>
                 </Routes>
-            </BrowserRouter>
+            {/* </BrowserRouter> */}
         </div>
     )
 }
