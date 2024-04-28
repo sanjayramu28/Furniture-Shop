@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import About from "./About/About.js";
 import Contact from "./Contact/Contact.js";
 import HomeFurnitures from "./HomeFurns/HomeFurnitures.js";
+import OfficeFurnitures from "./Office Furns/OfficeFurnitures.js";
+import HospitalFurnitures from "./HospitalFurns/HospitalFurnitures.js";
 const Navbar = () => {
 
     return (
@@ -38,25 +40,28 @@ const Navbar = () => {
                             Furnitures
                         </Link>
                         <div className="li">
-                            <li><Link to="Home funrnitures">Home furnitures</Link></li>
-                            <li><Link to="office funrnitures">Office furnitures</Link></li>
-                            <li><Link to="Home funrnitures">Hospital furnitures</Link></li>
+                            <li><Link to="Home-funrnitures">Home furnitures</Link></li>
+                            <li><Link to="Office-Furnitures">Office furnitures</Link></li>
+                            <li><Link to="Hospital-furnitures">Hospital furnitures</Link></li>
                         </div>
                     </ul>
                     <li><Link to="Contact">Contact</Link></li>
                 </ul>
             </div>
             {/* <BrowserRouter> */}
-                <Routes>
-                    <Route>
-                        <Route index element={<Home />} />
-                        <Route path="/Home" element={<Home />} />
-                        <Route path="/About" element={<About />} />
-                        <Route path="/Contact" element={<Contact />} />
-                        <Route path='Home funrnitures' element={<HomeFurnitures />} />
-                        {/* <Route path="*" element={<NoPage />} /> */}
-                    </Route>
-                </Routes>
+            <Routes>
+                <Route>
+                    <Route index element={<Home />} />
+                    <Route path="/Home" element={<Home />} />
+                    <Route path="/About" element={<About />} />
+                    <Route path="/Contact" element={<Contact />} />
+                    {/* <Route path="/Furnitures" element={<HomeFurnitures />}/> */}
+                        <Route path='Home-funrnitures' element={<HomeFurnitures />} />
+                        <Route path="Office-Furnitures" element={<OfficeFurnitures />} />
+                    {/* </Route> */}
+                    <Route path="Hospital-furnitures" element={<HospitalFurnitures />}  />
+                </Route>
+            </Routes>
             {/* </BrowserRouter> */}
         </div>
     )
