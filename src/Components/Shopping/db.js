@@ -98,3 +98,70 @@ export const office_Furns=[
         reducedprice:6000
     }
 ]
+
+
+export const Hospital_Furns=[
+    {
+        title:"Stretchor",
+        img:"https://i.pinimg.com/236x/f9/a0/1c/f9a01ca3c51957d5d65242e412885d3f.jpg",
+        category:"Waiting",
+        price:2000,
+        reducedprice:1800
+    },
+    {
+        title:"Waiting Chairs",
+        img:"https://i.pinimg.com/236x/2b/c7/30/2bc7309613ce34c5be9be626358d0fae.jpg",
+        category:"Waiting",
+        price:10000,
+        reducedprice:9000
+    },
+    {
+        title:"Chairs (Pack of 3)",
+        img:"https://i.pinimg.com/236x/e4/b2/ea/e4b2ea212f6d7e84d885368415520b22.jpg",
+        category:"Waiting",
+        price:9000,
+        reducedprice:8800
+    },
+    {
+        title:"Chairs (Pack Of 4)",
+        img:"https://i.pinimg.com/236x/31/14/03/311403c5a9851d49c378dd132f413d48.jpg",
+        category:"Waiting",
+        price:8000,
+        reducedprice:7700
+    },
+    {
+        title:"Bed",
+        img:"https://i.pinimg.com/236x/b6/60/59/b66059be1e6d6d987c5f061cce03c2a6.jpg",
+        category:"Care",
+        price:4000,
+        reducedprice:35000
+    },
+    {
+        title:"Patient's Bed",
+        img:"https://i.pinimg.com/236x/82/8b/71/828b710d64d10e8e453530bf1db6d258.jpg",
+        category:"Care",
+        price:5000,
+        reducedprice:4800
+    },
+    {
+        title:"Waiting Chair's",
+        img:"https://i.pinimg.com/236x/3e/dd/19/3edd19dc91c349dfd299006a39c1f71b.jpg",
+        category:"Waiting",
+        price:6000,
+        reducedprice:5500
+    },
+    {
+        title:"Bed",
+        img:"https://i.pinimg.com/236x/f6/83/04/f683048371ee9ea8ca280ffc9435c9e1.jpg",
+        category:"Care",
+        price:9090,
+        reducedprice:8909
+    },
+    {
+        title:"Multi-Speciality Bed",
+        img:"https://i.pinimg.com/564x/7d/42/3b/7d423b3f97a10bcd9a1320ae219627be.jpg",
+        category:"Care",
+        price:9000,
+        reducedprice:8000
+    }
+]

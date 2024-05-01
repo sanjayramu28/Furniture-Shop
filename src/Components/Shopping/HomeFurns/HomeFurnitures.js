@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 // import main from "../"
 import Category from '../Category';
 import HomeFurns from './Homefurns';
-import OfficeFurnitures from '../Office Furns/OfficeFurnitures';
-import { Outlet } from 'react-router-dom';
-
 
 
 export const data = [

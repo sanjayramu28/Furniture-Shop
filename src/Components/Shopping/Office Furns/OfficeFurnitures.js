@@ -1,33 +1,11 @@
 import React, { useContext, useState } from "react";
-// import { office_Furns } from "../../db";
 import { office_Furns } from "../db";
 import 'boxicons'
 import Category from "../Category";
-import { Outlet } from "react-router-dom";
 import OfficeFurns from "./OfficeFurns";
-import HomeFurnitures from "../HomeFurns/HomeFurnitures";
-import HomeFurns from "../HomeFurns/Homefurns";
-import HospitalFurnitures from "../HospitalFurns/HospitalFurnitures";
-// import {handleclick} from "../HomeFurns/HomeFurnitures"
-
 
 const OfficeFurnitures = ({ img }) => {
     const [selected, setselected] = useState()
-    
-    const Homefurnsd=()=>{
-        return   <HospitalFurnitures selected1={selected} hello="hell"/>
-    //  <OfficeFurns
-    //     img={item.img}
-    //     title={item.title}
-    //     price={item.price}
-    //     reducedprice={item.reducedprice}
-    // />
-    //         {selected}
-    //         {console.log("kmk")}
-        
-    }
-
-    Homefurnsd()
     
     const handleclick = (event) => {
         setselected(event.target.value)

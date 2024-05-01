@@ -311,11 +311,13 @@ body{
 
 .home-pro1{
     gap: 20px;
+    width: 100%;
 }
 
 .home-furns img{
     width: 100%;
     height: 200px;
+    /* +-+-+-+-+-+- */
     border-radius: 10px;
 }
 
@@ -346,6 +348,17 @@ transform: scale(1.1);
     box-shadow: 17px 20px 16px #dfdfde ;
     transition: 0.3s;
     cursor: pointer;
+}
+
+.hospital :hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hospital img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
 }
 
 @keyframes home-anim {
