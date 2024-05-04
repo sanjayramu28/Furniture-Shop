@@ -361,6 +361,21 @@ transform: scale(1.1);
     border-radius: 5px;
 }
 
+.side-img img{
+    width: 160px;
+    height: 140px;
+    border: 2px solid;
+    margin: 0px 20px 20px 0px;
+    cursor: pointer;
+}
+
+.side-img :hover{
+    transform: scale(1.1);
+    border: 3px solid;
+    border-radius: 20px;
+
+}
+
 @keyframes home-anim {
     from {
         top: 40vh;

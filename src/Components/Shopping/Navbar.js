@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import './main.css';
 import Home from './Home.js'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useParams } from "react-router-dom";
 import About from "./About/About.js";
 import Contact from "./Contact/Contact.js";
 import HomeFurnitures from "./HomeFurns/HomeFurnitures.js";
 import OfficeFurnitures from "./Office Furns/OfficeFurnitures.js";
 import HospitalFurnitures from "./HospitalFurns/HospitalFurnitures.js";
+import ProductView from "../ProductLink/ProductView"
 const Navbar = () => {
+
+    let { title } = useParams();
+    console.log(title)
 
     return (
         <div className="container-fluid">
@@ -48,6 +52,7 @@ const Navbar = () => {
                     <li><Link to="Contact">Contact</Link></li>
                 </ul>
             </div>
+
             {/* <BrowserRouter> */}
             <Routes>
                 <Route>
@@ -56,10 +61,11 @@ const Navbar = () => {
                     <Route path="/About" element={<About />} />
                     <Route path="/Contact" element={<Contact />} />
                     {/* <Route path="/Furnitures" element={<HomeFurnitures />}/> */}
-                        <Route path='Home-funrnitures' element={<HomeFurnitures />} />
-                        <Route path="Office-Furnitures" element={<OfficeFurnitures />} />
+                    <Route path='Home-funrnitures' element={<HomeFurnitures />} />
+                    <Route path="Office-Furnitures" element={<OfficeFurnitures />} />
                     {/* </Route> */}
-                    <Route path="Hospital-furnitures" element={<HospitalFurnitures />}  />
+                    <Route path="Hospital-furnitures" element={<HospitalFurnitures />} />
+                    <Route path="/product/:productId" element={<ProductView />} />
                 </Route>
             </Routes>
             {/* </BrowserRouter> */}
