@@ -1,6 +1,9 @@
 import React from 'react'
 
+
 const HospitalFurns = ({ title, img, price, reduced }) => {
+
+
   return (
     <div className='hospital text-dark text-decoration-none' >
       <div className='m-3  bg-light p-3' >
