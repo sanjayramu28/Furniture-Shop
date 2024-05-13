@@ -7,23 +7,26 @@ import Cart from '../Cart/Cart';
 // import { parse } from 'dotenv';
 // import { json } from 'body-parser';
 
+ export const localcart = () => {
+  const data = localStorage.getItem("CARTS")
+  console.log(data)
+
+  console.log("loc1")
+  if (data == "undefined") {
+    return []
+  }
+  else {
+    return JSON.parse(data)
+  }
+  
+  
+}
 const ProductView = () => {
 
   
-  const localcart = () => {
-    const data = localStorage.getItem("CARTS")
-    
-    if (data == "undefined") {
-      return []
-    }
-    else {
-      return JSON.parse(data)
-    }
-  }
   const [qty, setqty] = useState(1)
   const [cart, setcart] = useState(localcart())
-  
-  
+
   console.log(cart)
 
   useEffect(() => {
@@ -72,6 +75,7 @@ const ProductView = () => {
           </div>
         </div>
       </div>
+      <Cart />
       {/* <Cart items={cart} /> */}
     </div>
   );
