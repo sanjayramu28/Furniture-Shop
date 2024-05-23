@@ -8,13 +8,18 @@ import HomeFurnitures from "./HomeFurns/HomeFurnitures.js";
 import OfficeFurnitures from "./Office Furns/OfficeFurnitures.js";
 import HospitalFurnitures from "./HospitalFurns/HospitalFurnitures.js";
 import ProductView from "../ProductLink/ProductView"
+import Cart from "../ProductLink/Cart.js";
+import BuyNow from "./BuyNow/BuyNow.js";
+
 const Navbar = () => {
 
-    let { title } = useParams();
-    console.log(title)
+    // let { title } = useParams();
+    // console.log(title)
 
     return (
+        
         <div className="container-fluid">
+            
             <div className="header">
                 <div className="row">
                     <div className="col-md-4">
@@ -29,7 +34,11 @@ const Navbar = () => {
                                 <img src="https://cdn-icons-png.flaticon.com/128/1090/1090740.png"></img>
                             </li>
                             <li>
+                                {/* <Link to="Cart"> */}
+                                    <Link to="Cart">
                                 <img src="https://cdn-icons-png.flaticon.com/128/5337/5337564.png"></img>
+                                </Link>
+                                {/* </Link> */}
                             </li>
                         </ul>
                     </div>
@@ -40,20 +49,23 @@ const Navbar = () => {
                     <li><Link to="Home">Home</Link></li>
                     <li><Link to="About">About</Link></li>
                     <ul className="dropdown">
-                        <Link to="furnitures" className="fre" >
+                        <span className="fre " >
+                        <Link to="furnitures" >
                             Furnitures
                         </Link>
-                        <div className="li">
+                        </span>
+                        <ul className="li list-inline">
                             <li><Link to="Home-funrnitures">Home furnitures</Link></li>
                             <li><Link to="Office-Furnitures">Office furnitures</Link></li>
                             <li><Link to="Hospital-furnitures">Hospital furnitures</Link></li>
-                        </div>
+                        </ul>
                     </ul>
                     <li><Link to="Contact">Contact</Link></li>
                 </ul>
             </div>
 
             {/* <BrowserRouter> */}
+            
             <Routes>
                 <Route>
                     <Route index element={<Home />} />
@@ -66,8 +78,11 @@ const Navbar = () => {
                     {/* </Route> */}
                     <Route path="Hospital-furnitures" element={<HospitalFurnitures />} />
                     <Route path="/product/:productId" element={<ProductView />} />
+                    <Route path="/Cart" element={<Cart/>} />
+                    <Route path="/Buy/:title" element={<BuyNow/>}/>
                 </Route>
             </Routes>
+            
             {/* </BrowserRouter> */}
         </div>
     )

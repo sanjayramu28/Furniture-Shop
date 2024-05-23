@@ -65,6 +65,7 @@ const HospitalFurnitures = () => {
 
   return (
     <>
+    
       <div className="row">
         <div className='m-2 col-lg-2 '>
           <h2>Category</h2>

@@ -3,6 +3,7 @@ import { office_Furns } from "../db";
 import 'boxicons'
 import Category from "../Category";
 import OfficeFurns from "./OfficeFurns";
+import { Link } from "react-router-dom";
 
 const OfficeFurnitures = ({ img }) => {
     const [selected, setselected] = useState()
@@ -31,12 +32,14 @@ const OfficeFurnitures = ({ img }) => {
 
         return (
             filteredproducts.map((item) => (
+                <Link to={`/product/${item.title}`} key={item.title} style={{ textDecoration: 'none' }} >
                 <OfficeFurns
                     img={item.img}
                     title={item.title}
                     price={item.price}
                     reducedprice={item.reducedprice}
                 />
+                </Link>
             ))
         )
     }

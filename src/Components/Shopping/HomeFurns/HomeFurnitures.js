@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Category from '../Category';
 import HomeFurns from './Homefurns';
 import { data } from '../db';
+import { Link } from 'react-router-dom';
 
 
 
@@ -44,6 +45,7 @@ const HomeFurnitures = () => {
         }
 
         return filteredproducts.map((item) => (
+            <Link to={`/product/${item.title}`} style={{textDecoration:"none",color:"black"}}>
             <HomeFurns
                 img={item.img}
                 title={item.title}
@@ -51,6 +53,7 @@ const HomeFurnitures = () => {
                 originalprice={item.originalprice}
                 reducedprice={item.reducedprice}
             />
+            </Link>
         ))
 
     }

@@ -1,4 +1,4 @@
-body{
+body {
     width: auto;
     /* position: fixed; */
 }
@@ -60,7 +60,7 @@ body{
     list-style-type: none;
 }
 
-.discount{
+.discount {
     display: none;
     position: absolute;
     padding: 10px;
@@ -70,19 +70,20 @@ body{
     transition: 2s ease;
 }
 
-.new-arrivals:hover .discount{
+.new-arrivals:hover .discount {
     display: block;
 }
 
 
-.li{
+.li {
     position: absolute;
     padding: 20px;
     width: 200px;
-    top: 50px;
+    /* top: 220px; */
+    right: 29%;
     opacity: 0;
     transform: translateY(-80px);
-    box-shadow: 10px 10px 20px ;
+    box-shadow: 10px 10px 20px;
     border-radius: 20px;
     transition: 0.2s ease-in-out;
     z-index: 99;
@@ -90,20 +91,20 @@ body{
     background-color: white;
 }
 
-.li li{
+.li li {
     border-bottom: 2px solid black;
     border-radius: 6px;
     line-height: 60px;
     transition: 0.4s;
-    
+
 }
 
-.li li:hover{
+.li li:hover {
     transform: scale(1.1);
     box-shadow: 10px 10px 10px;
 }
 
-.mini-img{
+.mini-img {
     width: 50px;
     height: 50px;
     border: 1px solid black;
@@ -112,7 +113,7 @@ body{
 .dropdown:hover .li {
     /* display: block; */
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(20px);
 }
 
 .pre-pro {
@@ -156,8 +157,8 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    text-shadow:13px 10px 11px orangered;
-    font-family: "Kanit", sans-serif;  
+    text-shadow: 13px 10px 11px orangered;
+    font-family: "Kanit", sans-serif;
     font-weight: bolder;
 }
 
@@ -203,7 +204,7 @@ body{
     animation: home-anim 1s ease-out;
 }
 
-.new-arrivals{
+.new-arrivals {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 3px 1px 9px 2px gray;
@@ -211,22 +212,22 @@ body{
     cursor: pointer;
 }
 
-.new-arrive-tab{
+.new-arrive-tab {
     display: flex !important;
     justify-content: center !important;
     column-count: 4 !important;
     flex-wrap: wrap;
     gap: 90px;
-    
+
 }
 
-.new-img{
+.new-img {
     display: flex;
     width: 200px;
     height: 200px;
 }
 
-.new-arrivals:hover{
+.new-arrivals:hover {
     transform: scale(1.05);
     /* transform:  ; */
 }
@@ -235,7 +236,7 @@ body{
     gap: 20px;
 }
 
-.offers label{
+.offers label {
     /* display: contents; */
     position: relative;
     top: -50%;
@@ -245,22 +246,23 @@ body{
     margin-bottom: -20%;
     /* margin: 5px; */
 }
-.hg{
+
+.hg {
     margin-top: 15%;
 }
 
-.str img{
+.str img {
     width: 100%;
     height: 500px;
     border-radius: 20px;
 }
 
-.str p{
+.str p {
     font-family: cursive;
     font-size: 20px;
 }
 
-.info label{
+.info label {
     /* color: rgb(248, 185, 12); */
 
     font-family: monospace;
@@ -269,30 +271,30 @@ body{
     font-size: 20px;
 }
 
-.info span{
+.info span {
     margin-left: 20px;
     padding: 20px;
     font-size: large;
 }
 
 
-.home-furns{
+.home-furns {
     display: flex;
     margin: 20px;
     /* font-family: "Roboto Condensed", sans-serif; */
 }
 
 
-.home-pro{
+.home-pro {
     width: 250px;
     border-radius: 5px;
     display: flex;
-    box-shadow: 17px 20px 16px #dfdfde ;
+    box-shadow: 17px 20px 16px #dfdfde;
     transition: 0.3s;
     cursor: pointer;
 }
 
-.category input{
+.category input {
     height: 20px;
     width: 20px;
     color: #CF8549;
@@ -300,38 +302,39 @@ body{
 }
 
 
-.sidebar{
+.sidebar {
     position: sticky;
     overflow: auto;
     /* display: none; */
 }
-.home-pro:hover{
+
+.home-pro:hover {
     transform: scale(1.1);
 }
 
-.home-pro1{
+.home-pro1 {
     gap: 20px;
     width: 100%;
 }
 
-.home-furns img{
+.home-furns img {
     width: 100%;
     height: 200px;
     /* +-+-+-+-+-+- */
     border-radius: 10px;
 }
 
-.office{
+.office {
     /* display: flex; */
     gap: 50px;
     margin: 30px;
 }
 
-.office :hover{
-transform: scale(1.1);
+.office :hover {
+    transform: scale(1.1);
 }
 
-.office img{
+.office img {
     display: flex;
     margin: 20px;
     border-radius: 5px;
@@ -340,28 +343,28 @@ transform: scale(1.1);
     /* box-shadow: 1px 2px 15px; */
 }
 
-.office-furns{    
+.office-furns {
     width: 250px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    box-shadow: 17px 20px 16px #dfdfde ;
+    box-shadow: 17px 20px 16px #dfdfde;
     transition: 0.3s;
     cursor: pointer;
 }
 
-.hospital :hover{
+.hospital :hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.hospital img{
+.hospital img {
     width: 200px;
     height: 200px;
     border-radius: 5px;
 }
 
-.side-img img{
+.side-img img {
     width: 160px;
     height: 140px;
     border: 2px solid;
@@ -369,12 +372,70 @@ transform: scale(1.1);
     cursor: pointer;
 }
 
-.side-img :hover{
+.side-img :hover {
     transform: scale(1.1);
     border: 3px solid;
     border-radius: 20px;
+}
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 13px;
+    box-shadow: 5px 3px 6px ;
 
 }
+
+.cart-items {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.buy-btn {
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.buy::before {
+    content: '';
+    padding: 0.1px;
+    font-size: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    position: absolute;
+    height: 0px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: -10;
+    background-color: green;
+}
+
+.buy:hover::before {
+    animation: bttn 0.3s forwards;
+}
+
+@keyframes bttn {
+    from {
+        height: 0px;
+        width: 0px;
+        opacity: 0;
+        background-color: blue;
+        border: 0px solid black;
+    }
+
+    to {
+        height: 49px;
+        width: 89px;
+        opacity: 0.5;
+        background-color: red;
+        border: 3px solid black;
+    }
+}
+
 
 @keyframes home-anim {
     from {
@@ -389,13 +450,14 @@ transform: scale(1.1);
 }
 
 @keyframes rotate {
-    from{
+    from {
         opacity: 0.6;
         position: relative;
         top: -10px;
         left: -10px;
     }
-    to{
+
+    to {
         opacity: 1;
         top: 20px;
         left: 10px;

@@ -1,0 +1,19 @@
+.buy-img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.Forms input{
+    width: 100%;
+    padding: 10px;
+}
+
+.card,.card {
+    font-family:"IBM Plex Sans"
+}
+
+h2 ,h4,h3{
+    font-family:"IBM Plex Sans"
+}
