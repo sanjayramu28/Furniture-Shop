@@ -5,20 +5,13 @@ import { Decreasetotalprice, Increasetotalprice, decrement, increment, totalpric
 import { Link } from 'react-router-dom';
 
 
-
-// import {values} from "../Shopping/BuyNow/BuyNow"
-
-
 const Cart = () => {
-
   const data = useContext(cartItems);
   const parsedata = JSON.parse(data);
   const initialQuantity = parsedata.map(item => item.initialQuantity);
   const initialprice = parsedata.map(item => item.reducedprice)
   const [qty, setqty] = useState(initialQuantity)
-  const [TotalPrice, setTotalPrice] = useState(initialprice)
-
-  
+  const [TotalPrice, setTotalPrice] = useState(initialprice)  
 
   return (
     <div className='container-fluid'>
@@ -49,13 +42,13 @@ const Cart = () => {
                 }}>-</button>
                 <label className='qty'>{qty[index]}</label>
                 <button className='btn btn-danger m-2' onClick={() => {
-                  increment(qty, setqty, index)
+                  increment(setqty, index)
                   Increasetotalprice(setTotalPrice, index, item.reducedprice, qty[index])
                 }}>+</button>
               </div>
               <label className='ms-5'>Total:{TotalPrice[index]}</label>
             </div>
-            <div className="buy col-2">
+            <div className="buy col-1">
             <Link to= {`/Buy/${item.title}`} state={{item, qty:qty[index],TotalPrice:TotalPrice[index]}}>
                 <button className='btn  buy-btn text-dark' 
                 // onClick={()=>{
@@ -63,6 +56,7 @@ const Cart = () => {
                 // }}
                  >Buy Now</button>
               </Link>
+              <button className='btn d-flex'> 🗑️</button>
             </div>
           </div>
         </div>

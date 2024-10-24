@@ -5,7 +5,7 @@ export const changeimg = (src) => {
     main.src = src;
 }
 
-export const increment = (qty, setqty, index) => {
+export const increment = ( setqty, index) => {
     // setqty(qty+1)
     setqty(prevQty => {
         const newquantity = [...prevQty]
@@ -16,9 +16,8 @@ export const increment = (qty, setqty, index) => {
     });
 }
 
-export const decrement = (qty, setqty, index) => {
+export const decrement = (setqty, index) => {
     // setqty(qty-1)
-
     setqty(prevQty => {
         const newquantity = [...prevQty]
         if (newquantity[index] > 1) {
@@ -27,6 +26,7 @@ export const decrement = (qty, setqty, index) => {
         return newquantity
     });
 }
+
 
 export const Decreasetotalprice = (setTotalPrice, index, reducedprice,qty) => {
     setTotalPrice(prevprice => {
@@ -39,7 +39,7 @@ export const Decreasetotalprice = (setTotalPrice, index, reducedprice,qty) => {
         return total
     }
     )
-}
+} 
 
 export const Increasetotalprice = (setTotalPrice, index, reducedprice,qty) => {
     setTotalPrice(prevprice => {

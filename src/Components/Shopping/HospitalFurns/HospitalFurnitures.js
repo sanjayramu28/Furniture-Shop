@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import OfficeFurnitures from '../Office Furns/OfficeFurnitures'
 import { Hospital_Furns } from "../db"
 import HospitalFurns from "./HospitalFurns"
 import Category from '../Category'
@@ -44,10 +43,11 @@ const HospitalFurnitures = () => {
     }
 
 
+    
     return (
       filteredproducts.map((item) => (
         <>
-        <Link to={`/product/${item.title}`} key={item.title} style={{ textDecoration: 'none' }} >
+        <Link to={`/product/${item.title}/${item.id}`} state={item.title} key={item.title} style={{ textDecoration: 'none' }}  >
         <HospitalFurns 
           title={item.title}
           img={item.img}
@@ -65,7 +65,6 @@ const HospitalFurnitures = () => {
 
   return (
     <>
-    
       <div className="row">
         <div className='m-2 col-lg-2 '>
           <h2>Category</h2>

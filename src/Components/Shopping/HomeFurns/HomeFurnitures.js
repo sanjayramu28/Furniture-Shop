@@ -45,7 +45,7 @@ const HomeFurnitures = () => {
         }
 
         return filteredproducts.map((item) => (
-            <Link to={`/product/${item.title}`} style={{textDecoration:"none",color:"black"}}>
+            <Link to={`/product/${item.title}/${item.id}`} style={{textDecoration:"none",color:"black"}}>
             <HomeFurns
                 img={item.img}
                 title={item.title}

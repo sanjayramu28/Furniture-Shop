@@ -1,0 +1,42 @@
+.buy1::before
+{
+    content: "|";
+    position: absolute;
+    font-size: 40px;
+    /* padding: 20px; */
+    overflow: auto;
+    transform: rotate(45deg);
+}
+
+
+.buy-btn{
+    width: 20vh;
+    /* z-index: -99; */
+}
+
+/* .btn-span::before{
+    content: "|";
+    position: absolute; 
+    align-items: center;
+    z-index: 10;
+    font-size: 20px;
+    transform: rotate(45deg);
+} */
+
+.buy-btn:hover .buy1::before {
+    /* display: flex; */
+    content: "|";
+    position: absolute;
+    font-size: 40px;
+    transform: translateX(90px);
+    /* animation: buybtn linear 2s  forwards; */
+    
+}
+
+/* .buy1:hover .buy-btn::before{ 
+    display: none;
+    content: "";
+    display: block;
+    width: 20vh;
+    z-index: -10;
+}  */

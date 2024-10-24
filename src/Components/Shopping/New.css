@@ -1,0 +1,45 @@
+.admin{
+    font-family: "Reddit Mono";
+    background-image: url("https://img.freepik.com/free-vector/night-swimming-pool-tropical-summer-resort-vector-cartoon-illustration-inflatable-ball-rubber-ring-floating-water-surface-chaise-lounges-poolside-deck-moon-stars-dark-sky_107791-23994.jpg?t=st=1717256649~exp=1717260249~hmac=15047964fa3785acd50902092691b74c65512f1a0972d0ce573bd6789b718be7&w=1380");
+    background-repeat: no-repeat;
+    background-size: cover;  
+    color: aliceblue;
+    font-weight: 900;
+}
+
+.admin input{
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.home{
+    background-image: url('C:\Users\sanja\OneDrive\Desktop\home-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px -1px 16px 5px;
+    border-radius: 2px ;
+}
+
+table th,td {
+    border: 2px solid;
+    border-collapse: collapse;
+}
+
+.show{
+    background-image: url('https://img.freepik.com/free-vector/family-house-abstract-concept-vector-illustration-single-family-detached-home-family-house-single-dwelling-unit-townhouse-private-residence-mortgage-loan-down-payment-abstract-metaphor_335657-1957.jpg?t=st=1717299269~exp=1717302869~hmac=5cc31e3d58e0f360b6d87d8ab7f7a4f15c9f2b40cf313f28e4fb688ce2e85efe&w=740');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.showins{
+    background-image: url('https://img.freepik.com/free-photo/low-angle-shot-facade-white-modern-building-blue-clear-sky_181624-48219.jpg?t=st=1717300584~exp=1717304184~hmac=c78344ae8712421e53cfa45f6f79927add8a5c5f64cdebfcc7bd30e4aa20f2f0&w=996');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

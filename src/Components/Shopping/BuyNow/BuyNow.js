@@ -18,7 +18,7 @@ const BuyNow = () => {
             <h3>CheckOut</h3>
             <div className="mt-5 container-fluid d-flex">
                 <div className="w-50">
-                    <h2>Customer Information:</h2>
+                        <h2>Customer Information:</h2>
                     <form className="m-3 Forms">
                         <input className="w-100" type="text" name="Username" placeholder="Enter UserName or Email Address" />
                         <h4 className="mt-5">Billing Details</h4>

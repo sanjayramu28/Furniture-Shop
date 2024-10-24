@@ -11,8 +11,8 @@ import ProductView from "../ProductLink/ProductView"
 import Cart from "../ProductLink/Cart.js";
 import BuyNow from "./BuyNow/BuyNow.js";
 
-const Navbar = () => {
 
+const Navbar = () => {
     // let { title } = useParams();
     // console.log(title)
 
@@ -77,8 +77,8 @@ const Navbar = () => {
                     <Route path="Office-Furnitures" element={<OfficeFurnitures />} />
                     {/* </Route> */}
                     <Route path="Hospital-furnitures" element={<HospitalFurnitures />} />
-                    <Route path="/product/:productId" element={<ProductView />} />
-                    <Route path="/Cart" element={<Cart/>} />
+                    <Route path="/product/:productId/:id" element={<ProductView />} />
+                    <Route path="/Cart" element={<Cart />} />
                     <Route path="/Buy/:title" element={<BuyNow/>}/>
                 </Route>
             </Routes>

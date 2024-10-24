@@ -32,7 +32,7 @@ const OfficeFurnitures = ({ img }) => {
 
         return (
             filteredproducts.map((item) => (
-                <Link to={`/product/${item.title}`} key={item.title} style={{ textDecoration: 'none' }} >
+                <Link to={`/product/${item.title}/${item.id}`} key={item.title} style={{ textDecoration: 'none' }} >
                 <OfficeFurns
                     img={item.img}
                     title={item.title}
