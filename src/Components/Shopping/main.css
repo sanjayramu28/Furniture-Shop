@@ -1,6 +1,5 @@
 body {
-    width: auto;
-    /* position: fixed; */
+    width: auto; 
 }
 
 .header {
@@ -14,7 +13,7 @@ body {
     width: 20vh;
     height: 10vh;
     justify-content: center;
-    align-items: center;
+    align-items: center;        
 
 }
 
@@ -394,6 +393,7 @@ body {
 
 .buy-btn {
     padding: 10px;
+    width: 20vh;
     border-radius: 10px;
     z-index: 1000;
     cursor: pointer;
@@ -415,7 +415,7 @@ body {
 }
 
 .buy:hover::before {
-    animation: bttn 0.3s forwards;
+    animation: bttn 0.7s forwards;
 }
 
 @keyframes bttn {
@@ -429,7 +429,7 @@ body {
 
     to {
         height: 49px;
-        width: 89px;
+        width: 150px;
         opacity: 0.5;
         background-color: red;
         border: 3px solid black;

@@ -3,14 +3,14 @@
     content: "|";
     position: absolute;
     font-size: 40px;
-    /* padding: 20px; */
+    padding: 20px;
     overflow: auto;
     transform: rotate(45deg);
 }
 
 
 .buy-btn{
-    width: 20vh;
+    /* width: 20vh; */
     /* z-index: -99; */
 }
 
@@ -28,7 +28,7 @@
     content: "|";
     position: absolute;
     font-size: 40px;
-    transform: translateX(90px);
+    transform: translateX(900px);
     /* animation: buybtn linear 2s  forwards; */
     
 }

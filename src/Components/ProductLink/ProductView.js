@@ -5,6 +5,8 @@ import { changeimg, decrement, increment } from '../Shopping/Functions';
 import './Productview.css'
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const localcart = () => {
     const data = localStorage.getItem("CARTS");
@@ -15,15 +17,34 @@ export const localcart = () => {
     }
 };
 
+const notify = (msg) => toast(msg);
+
+
 const ProductView = () => {
     const [qty, setqty] = useState([1]);
+    const Check=(product)=>{
+        const checked=cart.some(pro=>pro.id==product.id);
+        if(!checked){
+        addc(product);
+        let msg="Item Added Successfully"
+        notify(msg);
+        }
+        else{
+            let msg="Item already Added"
+            notify(msg);
+        }
+    }
     const [cart, setcart] = useState(localcart());
-
+    
     useEffect(() => {
         window.localStorage.setItem("CARTS", JSON.stringify(cart));
         window.localStorage.setItem("Qty", JSON.stringify(qty));
     }, [cart, qty]);
-
+    
+    const addc=(product)=>{
+        setcart([...cart, product]);
+        console.log(product)        
+    }
 
     const { productId } = useParams();
 
@@ -50,6 +71,7 @@ const ProductView = () => {
                 <NavLink to="/" className=" text-decoration-none">Home</NavLink>/<label>{product.title}</label>
             </span>
             <br />
+            <ToastContainer />
             <div className="mt-5 row">
                 <div className="col d-flex justify-content-center ms-5">
                     <div className="d-flex flex-column side-img">
@@ -69,9 +91,10 @@ const ProductView = () => {
                         <label className='qty'>{qty[0]}</label>
                         <button className='btn btn-danger m-2' onClick={() => increment(setqty, 0)}>+</button> */}
                         <button onClick={() => {
-                            setcart([...cart, product]);
-                            console.log("Vcl");
-                            } }className='btn btn-outline-primary fs-4'>🛒Add To Cart</button>
+                            Check(product);
+                        //    setcart([...cart, product]);
+                        }
+                            } className='btn btn-outline-primary fs-4'>🛒Add To Cart</button>
                         <br />
                         {/* <div className="d-flex align-items-center buy1">
                         <span className='btn-span fs-2'></span>
